@@ -1,5 +1,5 @@
 ﻿#ifndef NEURAL_NETWORK_HPP		// If is not declarate/added this header file
-#define NEURAL_NETWORK_HPP		// declarating/adding him
+#define NEURAL_NETWORK_HPP		// declarating/adding file
 
 #include <iostream>				// adding standard input/output library
 #include <vector>				// STL - Standard template library
@@ -31,36 +31,46 @@ private:
 
 public:
 
-	Neural_network();																							// constructor
+	// constructor
+	Neural_network();																							
 
-	void Read_data_MLP_x_x(std::vector<double>& Input_x1,														// reading input data from file
-							std::vector<double>& Input_x2,														// ...
-							std::vector<double>& Output_y1);													// ...
+	// reading input data from file
+	void Read_data_MLP_x_x(std::vector<double>& Input_x1,														
+							std::vector<double>& Input_x2,														
+							std::vector<double>& Output_y1);													
 
-	void Min_max_unipolar_scaling(std::vector<double>& Vector);													// values from 0 to 1
+	// values from 0 to 1
+	void Min_max_unipolar_scaling(std::vector<double>& Vector);													
 
-	void Min_max_bipolar_scaling(std::vector<double>& Vector);													// values from 0 to -1
+	// values from 0 to -1
+	void Min_max_bipolar_scaling(std::vector<double>& Vector);													
 
 	void Reversal_min_max_unipolar_scaling();																	
 
-	void Pseudo_random_numbers(std::vector<double>& Vector);													// for first weights wector
+	// for first weights wector
+	void Pseudo_random_numbers(std::vector<double>& Vector);													
 
-	void Calculating_the_network_MLP_X_X(std::vector<double>& Input_x1,											// forward propagation
-											std::vector<double>& Input_x2,										// ...
-											std::vector<double>& Output_y1,										// ...
-											std::vector<double>& Vector_of_weights,								// ...
-											std::vector<double>& Vector_of_neuron_values,						// ...
-											double Bias);														// ...
+	// forward and back propagation
+	void Calculating_the_network_MLP_X_X(std::vector<double>& Input_x1,											
+		std::vector<double>& Input_x2,										
+		std::vector<double>& Output_y1,										
+		std::vector<double>& Vector_of_weights,								
+		std::vector<double>& Vector_of_neuron_values,						
+		double Bias);														
 
-	int Drawning_plot(std::vector<double>* Vector_of_neuron_values);											// creating file with plot
+	// creating file with plot
+	int Drawning_plot(std::vector<double>* Vector_of_neuron_values);											
 
-	double Unipolar_sigmoidal_function(double e);																// values from 0 to 1 
+	// values from 0 to 1 
+	double Unipolar_sigmoidal_function(double e);																
 
-	void Display_results_for_MLP_x_x();																			// display results in main function
+	// display results in main function
+	void Display_results_for_MLP_x_x();																			
 };
 
 
 
 
 
-#endif							// end if function of NEURAL_NETWORK.HPP
+// end if function of NEURAL_NETWORK.HPP
+#endif							
