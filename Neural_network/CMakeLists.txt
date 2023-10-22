@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-include_directories(Include)
+include_directories(Include)				
 file(GLOB SOURCES "Source/*.cpp")
 add_executable (Neural_network ${SOURCES})
 
