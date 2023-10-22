@@ -1,4 +1,4 @@
-# neural_network
+# Neural_network
 
 This project simulating working artificial neural network.
 
