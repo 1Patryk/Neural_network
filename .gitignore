@@ -8,5 +8,17 @@
 
 /Notepad.txt
 /.vs
-/out
 /.gitignore
+
+
+# Inside 'out'
+
+/.cmake
+/CMakeFiles
+/Testing
+/.ninja_deps
+/.ninja_log
+/build.ninja
+/cmake_install.cmake
+/CMakeCache.txt
+/VSInheritEnvironments.txt
