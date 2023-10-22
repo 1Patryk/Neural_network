@@ -6,8 +6,8 @@
 #include <fstream>				// adding posibility connect with .txt files
 #include <chrono>				// time executive in program 
 #include <ctime>				// ...
-//#include "pbPlots.hpp"			// library for drawn plots
-//#include "supportLib.hpp"		// ...
+#include "pbPlots.hpp"			// library for drawn plots
+#include "supportLib.hpp"		// ...
 
 class Neural_network
 {
@@ -34,10 +34,13 @@ public:
 	// constructor
 	Neural_network();																							
 
+	// display times wich during from start to end function 
+	void Display_results_counting_time(auto Start, auto Stop);
+
 	// reading input data from file
 	void Read_data_MLP_x_x(std::vector<double>& Input_x1,														
-							std::vector<double>& Input_x2,														
-							std::vector<double>& Output_y1);													
+		std::vector<double>& Input_x2,														
+		std::vector<double>& Output_y1);													
 
 	// values from 0 to 1
 	void Min_max_unipolar_scaling(std::vector<double>& Vector);													
@@ -56,7 +59,7 @@ public:
 		std::vector<double>& Output_y1,										
 		std::vector<double>& Vector_of_weights,								
 		std::vector<double>& Vector_of_neuron_values,						
-		double Bias);														
+		double& Bias);														
 
 	// creating file with plot
 	int Drawning_plot(std::vector<double>* Vector_of_neuron_values);											
@@ -65,7 +68,7 @@ public:
 	double Unipolar_sigmoidal_function(double e);																
 
 	// display results in main function
-	void Display_results_for_MLP_x_x();																			
+	void Display_results_for_MLP_x_x(); 
 };
 
 
