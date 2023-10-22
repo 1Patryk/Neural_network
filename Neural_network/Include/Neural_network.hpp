@@ -6,8 +6,8 @@
 #include <fstream>				// adding posibility connect with .txt files
 #include <chrono>				// time executive in program 
 #include <ctime>				// ...
-#include "pbPlots.hpp"			// library for drawn plots
-#include "supportLib.hpp"		// ...
+//#include "pbPlots.hpp"			// library for drawn plots
+//#include "supportLib.hpp"		// ...
 
 class Neural_network
 {
